@@ -13,6 +13,7 @@
 		9B4C6C4D21234B7600380401 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B4C6C4C21234B7600380401 /* Assets.xcassets */; };
 		9B4C6C5021234B7600380401 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B4C6C4E21234B7600380401 /* LaunchScreen.storyboard */; };
 		9B4C6C7A212374EF00380401 /* RegisterpageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C6C79212374EF00380401 /* RegisterpageViewController.swift */; };
+		9BD403A12126030D00BAFD40 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD403A02126030D00BAFD40 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		9B4C6C4F21234B7600380401 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B4C6C5121234B7600380401 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B4C6C79212374EF00380401 /* RegisterpageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterpageViewController.swift; sourceTree = "<group>"; };
+		9BD403A02126030D00BAFD40 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				9B4C6C4E21234B7600380401 /* LaunchScreen.storyboard */,
 				9B4C6C5121234B7600380401 /* Info.plist */,
 				9B4C6C79212374EF00380401 /* RegisterpageViewController.swift */,
+				9BD403A02126030D00BAFD40 /* LoginViewController.swift */,
 			);
 			path = empPayroll;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BD403A12126030D00BAFD40 /* LoginViewController.swift in Sources */,
 				9B4C6C4821234B7300380401 /* ViewController.swift in Sources */,
 				9B4C6C7A212374EF00380401 /* RegisterpageViewController.swift in Sources */,
 				9B4C6C4621234B7300380401 /* AppDelegate.swift in Sources */,

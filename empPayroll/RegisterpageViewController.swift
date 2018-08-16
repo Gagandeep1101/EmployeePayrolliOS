@@ -2,8 +2,8 @@
 //  RegisterpageViewController.swift
 //  empPayroll
 //
-//  Created by MacStudent on 2018-08-14.
-//  Copyright © 2018 MacStudent. All rights reserved.
+//  Created by Gagandeep on 2018-08-14.
+//  Copyright © 2018 Gagandeep. All rights reserved.
 //
 
 import UIKit
@@ -13,7 +13,7 @@ class RegisterpageViewController: UIViewController {
     @IBOutlet weak var txtUserEmail: UITextField!
     @IBOutlet weak var txtUserPassword: UITextField!
     @IBOutlet weak var txtUserConfirmPassword: UITextField!
-    var userDefault: UserDefaults?
+    //var userDefault: UserDefaults!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,12 +49,28 @@ class RegisterpageViewController: UIViewController {
         }
         
         //Store data
-        userDefault = NSUserDefa
-        //UserDefaults.standardUserdefaults().setObject(userEmail, forKey: "userEmail")
-       // UserDefaults.standardUserdefaults().setObject(userEmail, forKey: "userPassword")
-        // UserDefaults.standardUserdefaults().synchronize()
+        
+        //UserDefaults.standardUserdefaults().setObject(userEmail, forKey: "userEmail") - legacy
+        UserDefaults.standard.set("String", forKey: "userEmail")
+        
+        //UserDefaults.standardUserdefaults().setObject(userEmail, forKey: "userPassword") - legacy
+        UserDefaults.standard.set("String", forKey: "userPassword")
+        
+        //UserDefaults.standardUserdefaults().synchronize() - legacy
+        
+        UserDefaults.standard.synchronize()
         
         //Display alert message with confirmation
+        
+        var myAlert = UIAlertController(title: "Alert", message: "Registration is successful. Thank you!", preferredStyle: UIAlertControllerStyle.alert)
+        
+        let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default){ action in
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+        myAlert.addAction(okAction)
+        self.present(myAlert, animated: true, completion: nil)
+        
     }
     
     func displayMyAlertMessage(userMessage: String)
@@ -68,6 +84,9 @@ class RegisterpageViewController: UIViewController {
         self.present(myAlert, animated: true,completion: nil)
     }
     
+    @IBAction func backButton(_ sender: UIButton) {
+        self.dismiss(animated: false, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

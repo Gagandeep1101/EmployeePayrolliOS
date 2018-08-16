@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KhW-MH-O0O">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jhq-f2-ok7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -25,23 +25,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31B-0d-jA4">
+                                <rect key="frame" x="141" y="318" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.30922236980000001" green="0.54845317810000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.30922236980000001" green="0.54845317810000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLogout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7vi-AU-wwI"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.8765314018588527" blue="0.95075584707625738" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="8jO-1u-hWb"/>
-                    <connections>
-                        <segue destination="jhq-f2-ok7" kind="presentation" identifier="loginView" id="XK1-0Y-CyP"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1056.8" y="118.29085457271366"/>
+            <point key="canvasLocation" x="2078" y="-149"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="xi0-2J-Fq7">
             <objects>
-                <viewController id="jhq-f2-ok7" sceneMemberID="viewController">
+                <viewController id="jhq-f2-ok7" customClass="LoginViewController" customModule="empPayroll" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YQe-rK-mVw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,6 +97,9 @@
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="btnLogin:" destination="jhq-f2-ok7" eventType="touchUpInside" id="mQN-OC-D0B"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyB-hN-oqc">
                                 <rect key="frame" x="172" y="395" width="30" height="30"/>
@@ -104,13 +117,18 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.8171600982531495" green="1" blue="0.84750687995051788" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="9d7-Gw-JcQ"/>
                     </view>
+                    <connections>
+                        <outlet property="txtUserEmail" destination="ZVh-km-XJH" id="U4k-KZ-jf3"/>
+                        <outlet property="txtUserPassword" destination="FD9-Nj-jmN" id="CZX-Em-qez"/>
+                        <segue destination="KhW-MH-O0O" kind="show" identifier="loggedinView" id="xDc-Pc-obb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Srt-f0-3SK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1832.8" y="117.39130434782609"/>
+            <point key="canvasLocation" x="238" y="-151"/>
         </scene>
         <!--Registerpage View Controller-->
         <scene sceneID="Zi1-Bm-vj3">
@@ -184,8 +202,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="I have an account. Let me login."/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHt-6p-ZaS">
+                                <rect key="frame" x="6" y="24" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt; Back">
+                                    <color key="titleColor" red="1" green="0.31317162977257518" blue="0.22841862711990224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="UPk-qo-wQJ" eventType="touchUpInside" id="1xH-nc-R1p"/>
+                                    <action selector="backButton:" destination="JOl-6T-vLf" eventType="touchUpInside" id="Oi7-vb-VKt"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.79221889046012828" green="1" blue="0.79810755790320931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="iCa-Yq-H6Z"/>
                     </view>
                     <connections>
@@ -195,8 +224,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0zX-f9-HN9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="UPk-qo-wQJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1832.8" y="879.31034482758628"/>
+            <point key="canvasLocation" x="428" y="616"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vOF-R0-Npu">
@@ -209,12 +239,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gpp-yb-6Iw"/>
+                        <segue destination="BYZ-38-t0r" kind="show" id="Qr3-ck-oE8"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HxN-t6-HFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+            <point key="canvasLocation" x="1188" y="-150"/>
         </scene>
     </scenes>
 </document>
