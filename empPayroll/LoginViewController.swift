@@ -24,21 +24,22 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func btnLogin(_ sender: UIButton) {
-        
         let userEmail = txtUserEmail.text
         let userPassword = txtUserPassword.text
         
-        let userEmailStored = UserDefaults.standard.string(forKey: "UserEmail")
-        let userPasswordStored = UserDefaults.standard.string(forKey: "UserPassword")
+        let userEmailStored = UserDefaults.standard.string(forKey: "userEmail")
+        let userPasswordStored = UserDefaults.standard.string(forKey: "userPassword")
         
         if userEmailStored == userEmail
         {
             if userPasswordStored == userPassword{
+                print("sucess login")
+                self.performSegue(withIdentifier: "loggedinView", sender: self)
                 //Login is successful
                 UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
                 UserDefaults.standard.synchronize()
                 //self.dismiss(animated: true, completion: nil)
-                self.performSegue(withIdentifier: "loggedinView", sender: self)
+                
                 
             }
         }

@@ -27,10 +27,9 @@ class ViewController: UIViewController {
         if(isUserLoggedIn)
         {
         
-       // self.performSegue(withIdentifier: "loginView", sender: self)
+      // self.performSegue(withIdentifier: "loginView", sender: self)
     }
     }
-    
     @IBAction func btnLogout(_ sender: UIButton) {
         UserDefaults.standard.set(false, forKey: "isUserLoggedIn")
         UserDefaults.standard.synchronize()

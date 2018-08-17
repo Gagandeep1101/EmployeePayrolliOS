@@ -13,6 +13,8 @@
 		9B4C6C4D21234B7600380401 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B4C6C4C21234B7600380401 /* Assets.xcassets */; };
 		9B4C6C5021234B7600380401 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B4C6C4E21234B7600380401 /* LaunchScreen.storyboard */; };
 		9B4C6C7A212374EF00380401 /* RegisterpageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C6C79212374EF00380401 /* RegisterpageViewController.swift */; };
+		9BB6C01521275E7000D02E22 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB6C01421275E7000D02E22 /* HomeViewController.swift */; };
+		9BB6C017212767F800D02E22 /* AddEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB6C016212767F800D02E22 /* AddEmployeeViewController.swift */; };
 		9BD403A12126030D00BAFD40 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD403A02126030D00BAFD40 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		9B4C6C4F21234B7600380401 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B4C6C5121234B7600380401 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B4C6C79212374EF00380401 /* RegisterpageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterpageViewController.swift; sourceTree = "<group>"; };
+		9BB6C01421275E7000D02E22 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9BB6C016212767F800D02E22 /* AddEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployeeViewController.swift; sourceTree = "<group>"; };
 		9BD403A02126030D00BAFD40 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +70,8 @@
 				9B4C6C5121234B7600380401 /* Info.plist */,
 				9B4C6C79212374EF00380401 /* RegisterpageViewController.swift */,
 				9BD403A02126030D00BAFD40 /* LoginViewController.swift */,
+				9BB6C01421275E7000D02E22 /* HomeViewController.swift */,
+				9BB6C016212767F800D02E22 /* AddEmployeeViewController.swift */,
 			);
 			path = empPayroll;
 			sourceTree = "<group>";
@@ -141,6 +147,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BB6C017212767F800D02E22 /* AddEmployeeViewController.swift in Sources */,
+				9BB6C01521275E7000D02E22 /* HomeViewController.swift in Sources */,
 				9BD403A12126030D00BAFD40 /* LoginViewController.swift in Sources */,
 				9B4C6C4821234B7300380401 /* ViewController.swift in Sources */,
 				9B4C6C7A212374EF00380401 /* RegisterpageViewController.swift in Sources */,

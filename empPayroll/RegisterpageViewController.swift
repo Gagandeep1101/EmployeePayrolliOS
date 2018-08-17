@@ -13,7 +13,8 @@ class RegisterpageViewController: UIViewController {
     @IBOutlet weak var txtUserEmail: UITextField!
     @IBOutlet weak var txtUserPassword: UITextField!
     @IBOutlet weak var txtUserConfirmPassword: UITextField!
-    //var userDefault: UserDefaults!
+    //var userDefault : UserDefaults.standard?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,10 +52,10 @@ class RegisterpageViewController: UIViewController {
         //Store data
         
         //UserDefaults.standardUserdefaults().setObject(userEmail, forKey: "userEmail") - legacy
-        UserDefaults.standard.set("String", forKey: "userEmail")
+        UserDefaults.standard.set(userEmail, forKey: "userEmail")
         
-        //UserDefaults.standardUserdefaults().setObject(userEmail, forKey: "userPassword") - legacy
-        UserDefaults.standard.set("String", forKey: "userPassword")
+        //UserDefaults.standardUserdefaults().setObject(userPassword, forKey: "userPassword") - legacy
+        UserDefaults.standard.set(userPassword, forKey: "userPassword")
         
         //UserDefaults.standardUserdefaults().synchronize() - legacy
         
